@@ -1,5 +1,7 @@
 // MENTORS DATA
 
+import Image from "next/image";
+
 interface Product {
     id: number;
     name: string;
@@ -77,7 +79,9 @@ const Mentor = () => {
                     {products.map((product) => (
                         <div key={product.id} className="group relative">
                             <div className="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none lg:h-80">
-                                <img
+                                <Image
+                                    width={100}
+                                    height={100}
                                     src={product.imageSrc}
                                     alt={product.imageAlt}
                                     className="h-full w-full object-cover object-center lg:h-full lg:w-full"
